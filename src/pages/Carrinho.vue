@@ -7,12 +7,12 @@
 </template>
 
 <script>
-  export default {
-    name: 'home',
-    data () {
-      return {
-        msg: 'Este é o Carrinho'
-      }
-    }
-  }
+export default {
+  name: 'home',
+  data() {
+    return {
+      msg: 'Este é o Carrinho',
+    };
+  },
+};
 </script>

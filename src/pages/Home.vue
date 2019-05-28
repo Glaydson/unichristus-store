@@ -7,12 +7,12 @@
 </template>
 
 <script>
-  export default {
-    name: 'home',
-    data () {
-      return {
-        msg: 'Bem Vindo à Sua Aplicação Vue.js'
-      }
-    }
-  }
+export default {
+  name: 'home',
+  data() {
+    return {
+      msg: 'Bem Vindo à Sua Aplicação Vue.js',
+    };
+  },
+};
 </script>
