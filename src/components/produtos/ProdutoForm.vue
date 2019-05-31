@@ -18,7 +18,7 @@
           placeholder="Preço"
           v-model="modelo.preco"
           name="preco" />
-      </div>      
+      </div>
 <div class="form-group">
         <label>Fabricante</label>
         <select
