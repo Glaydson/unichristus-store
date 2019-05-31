@@ -1,4 +1,6 @@
 /* eslint-disable no-underscore-dangle */
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-console */
 import {
   ADICIONAR_PRODUTO,
   ADICIONAR_PRODUTO_SUCESSO,

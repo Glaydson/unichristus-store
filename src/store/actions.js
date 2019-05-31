@@ -1,6 +1,7 @@
 /* eslint-disable no-underscore-dangle */
+/* eslint-disable no-console */
 import axios from 'axios';
-import API_BASE from '../config';
+import { API_BASE } from '../config';
 import {
   ADICIONAR_PRODUTO,
   ADICIONAR_PRODUTO_SUCESSO,
