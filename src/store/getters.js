@@ -9,6 +9,7 @@ export const produtoGetters = {
     }
     return state.produto;
   },
+  produto: state => state.produto,
 };
 
 export const fabricanteGetters = {
