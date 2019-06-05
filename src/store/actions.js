@@ -1,7 +1,7 @@
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable no-console */
 import axios from 'axios';
-import { API_BASE } from '../config';
+import { API_BASE, API_BASE_LIVRARIA } from '../config';
 import {
   ADICIONAR_PRODUTO,
   ADICIONAR_PRODUTO_SUCESSO,
@@ -15,6 +15,10 @@ import {
   TODOS_PRODUTOS_SUCESSO,
   TODOS_FABRICANTES,
   TODOS_FABRICANTES_SUCESSO,
+  TODOS_LIVROS,
+  TODOS_LIVROS_SUCESSO,
+  LIVRO_POR_ID,
+  LIVRO_POR_ID_SUCESSO,
 } from './mutation-types';
 
 export const produtoActions = {
@@ -66,3 +70,17 @@ export const fabricanteActions = {
   },
 };
 
+export const livroActions = {
+  todosLivros({ commit }) {
+    commit(TODOS_LIVROS);
+    axios.get(`${API_BASE_LIVRARIA}/livros/todos`).then((response) => {
+      commit(TODOS_LIVROS_SUCESSO, response.data);
+    });
+  },
+  livroPorId({ commit }, payload) {
+    commit(LIVRO_POR_ID);
+    axios.get(`${API_BASE_LIVRARIA}/livros/${payload}`).then((response) => {
+      commit(LIVRO_POR_ID_SUCESSO, response.data);
+    });
+  },
+};

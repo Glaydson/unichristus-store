@@ -15,6 +15,7 @@ export default {
     adicionaProduto(modelo) {
       // eslint-disable-next-line
       console.log('modelo', modelo);
+      this.$store.dispatch('adicionarProduto', modelo);
     },
   },
   components: {
@@ -22,4 +23,3 @@ export default {
   },
 };
 </script>
-

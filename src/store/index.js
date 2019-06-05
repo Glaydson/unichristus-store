@@ -19,6 +19,10 @@ export default new Vuex.Store({
     produtos: [],
     // todos os fabricantes
     fabricantes: [],
+    // todos os livros
+    livros: [],
+    // livro selecionado
+    livro: {},
   },
   getters: Object.assign({}, produtoGetters, fabricanteGetters),
   mutations: Object.assign({}, produtoMutations, fabricanteMutations, carrinhoMutations),

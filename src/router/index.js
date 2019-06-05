@@ -6,6 +6,7 @@ import Novo from '@/pages/admin/Novo';
 import Produtos from '@/pages/admin/Produtos';
 import Editar from '@/pages/admin/Editar';
 import Carrinho from '@/pages/Carrinho';
+import Detalhes from '@/pages/Detalhes';
 
 Vue.use(Router);
 
@@ -41,12 +42,25 @@ export default new Router({
         },
       ],
     },
-
     {
       path: '/carrinho',
       name: 'Carrinho',
       component: Carrinho,
     },
-
+    {
+      path: '/detalhes/:id',
+      name: 'Detalhes',
+      component: Detalhes,
+    },
+    {
+      path: '/homeLivros',
+      name: 'HomeLivros',
+      component: HomeLivros,
+    },
+    {
+      path: '/detalhesLivro/:id',
+      name: 'DetalhesLivro',
+      component: DetalhesLivro,
+    },
   ],
 });

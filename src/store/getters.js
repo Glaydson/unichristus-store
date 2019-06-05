@@ -17,3 +17,8 @@ export const fabricanteGetters = {
   todosFabricantes: state => state.fabricantes,
 };
 
+export const livroGetters = {
+  // Todos os livros
+  todosLivros: state => state.livros,
+  livro: state => state.livro,
+};

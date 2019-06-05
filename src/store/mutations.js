@@ -16,6 +16,10 @@ import {
   TODOS_PRODUTOS_SUCESSO,
   TODOS_FABRICANTES,
   TODOS_FABRICANTES_SUCESSO,
+  TODOS_LIVROS,
+  TODOS_LIVROS_SUCESSO,
+  LIVRO_POR_ID,
+  LIVRO_POR_ID_SUCESSO,
 } from './mutation-types';
 
 export const produtoMutations = {
@@ -89,3 +93,19 @@ export const fabricanteMutations = {
   },
 };
 
+export const livroMutations = {
+  [TODOS_LIVROS](state) {
+    state.showLoader = true;
+  },
+  [TODOS_LIVROS_SUCESSO](state, payload) {
+    state.showLoader = false;
+    state.livros = payload;
+  },
+  [LIVRO_POR_ID](state) {
+    state.showLoader = true;
+  },
+  [LIVRO_POR_ID_SUCESSO](state, payload) {
+    state.showLoader = false;
+    state.livro = payload;
+  },
+};
