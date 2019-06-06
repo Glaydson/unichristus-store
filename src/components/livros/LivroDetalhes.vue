@@ -4,22 +4,25 @@
       <div class="row">
         <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12 product-details__info">
           <div class="product-details__description">
-            <h3>{{livro.titulo}}</h3>
-            <p>
-              {{livro.dataPublicacao}}
-            </p>
+            <h2>Título: {{livro.titulo}}</h2>
           </div>
           <div class="product-details__price-cart">
-            <p>${{livro.preco}}</p>
+            <p>Data de Publicação: {{livro.dataPublicacao | formatDate}}</p>
           </div>
           <div class="product-details__price-cart">
-            <p>${{livro.editora.nome}}</p>
+            <p>Preço: ${{livro.preco}}</p>
           </div>
-          <ul v-for="autor in livro.autores" :key="autor.autorID">
-            <li>
-              {{autor.nome}}
-            </li>
-          </ul>
+          <div class="product-details__price-cart">
+            <p>Editora: {{livro.editora.nome}}</p>
+          </div>
+          <div>
+            <h3>Autores:</h3>
+            <ul v-for="autor in autores" :key="autor.autorID">
+              <li>
+                {{autor.nome}}
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -29,6 +32,11 @@
 <script>
 export default {
   props: ['livro'],
+  computed: {
+    autores() {
+      return this.livro.autores;
+    },
+  },
 };
 </script>
 

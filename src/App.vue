@@ -6,7 +6,7 @@
 
           <!-- Links de Navegação -->
           <li><router-link to="/">Home</router-link></li>
-          <li><router-link to="/">HomeLivros</router-link></li>
+          <li><router-link to="/homeLivros">Home Livros</router-link></li>
           <li><router-link to="/admin">Admin</router-link></li>
           <li><router-link to="/carrinho">Carrinho</router-link></li>
 
