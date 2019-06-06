@@ -7,6 +7,8 @@ import Produtos from '@/pages/admin/Produtos';
 import Editar from '@/pages/admin/Editar';
 import Carrinho from '@/pages/Carrinho';
 import Detalhes from '@/pages/Detalhes';
+import DetalhesLivro from '@/pages/DetalhesLivro';
+import HomeLivros from '@/pages/HomeLivros';
 
 Vue.use(Router);
 
