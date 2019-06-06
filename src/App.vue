@@ -3,13 +3,11 @@
     <nav>
       <div class="container">
         <ul class="nav__left">
-
           <!-- Links de Navegação -->
-          <li><router-link to="/">Home</router-link></li>
+          <li><router-link to="/">Home Produtos</router-link></li>
           <li><router-link to="/homeLivros">Home Livros</router-link></li>
-          <li><router-link to="/admin">Admin</router-link></li>
-          <li><router-link to="/carrinho">Carrinho</router-link></li>
-
+          <li><router-link to="/admin">Admin Produtos</router-link></li>
+          <li><router-link to="/adminLivros">Admin Livros</router-link></li>
         </ul>
       </div>
     </nav>

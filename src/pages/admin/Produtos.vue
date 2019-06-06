@@ -32,6 +32,7 @@ export default {
     },
   },
   created() {
+    this.$store.dispatch('todosProdutos');
     if (this.produtos.length === 0) {
       this.$store.dispatch('todosProdutos');
     }

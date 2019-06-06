@@ -9,6 +9,7 @@ import Carrinho from '@/pages/Carrinho';
 import Detalhes from '@/pages/Detalhes';
 import DetalhesLivro from '@/pages/DetalhesLivro';
 import HomeLivros from '@/pages/HomeLivros';
+import Livros from '@/pages/admin/Livros';
 
 Vue.use(Router);
 
@@ -63,6 +64,11 @@ export default new Router({
       path: '/detalhesLivro/:id',
       name: 'DetalhesLivro',
       component: DetalhesLivro,
+    },
+    {
+      path: '/adminLivros',
+      name: 'Livros',
+      component: Livros,
     },
   ],
 });

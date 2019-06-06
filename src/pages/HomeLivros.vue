@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="title">
-      <h1><i class="fa fa-braille"></i> Em Estoque</h1>
+      <h1><i class="fa fa-braille"></i> Livros</h1>
     </div>
     <livro-lista></livro-lista>
   </div>
