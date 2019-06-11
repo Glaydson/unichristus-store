@@ -1,4 +1,5 @@
 <template>
+  <div class="container">
     <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
           <table class="table table-striped">
             <thead>
@@ -11,17 +12,18 @@
             </tr>
             </thead>
             <tbody>
-            <tr v-for="livro in livros" :key="livro.livroID">
-              <td>{{livro.titulo}}</td>
-              <td>${{livro.preco}}</td>
-              <td>{{livro.editora}}</td>
-              <td><router-link :to="'/adminLivros/editar/'+livro.livroID">
-                <i class="fa fa-pencil-square-o"></i></router-link></td>
-              <td><a @click="removerLivro(livro.livroID)" ><i class="fa fa-trash"></i></a></td>
-            </tr>
+              <tr v-for="livro in livros" :key="livro.livroID">
+                <td>{{livro.titulo}}</td>
+                <td>${{livro.preco}}</td>
+                <td>{{livro.editora.nome}}</td>
+                <td><router-link :to="'/adminLivros/editar/'+livro.livroID">
+                  <i class="fa fa-pencil-square-o"></i></router-link></td>
+                <td><a @click="removerLivro(livro.livroID)" ><i class="fa fa-trash"></i></a></td>
+              </tr>
             </tbody>
           </table>
-        </div>
+    </div>
+  </div>
 </template>
 
 <script>

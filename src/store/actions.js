@@ -19,6 +19,12 @@ import {
   TODOS_LIVROS_SUCESSO,
   LIVRO_POR_ID,
   LIVRO_POR_ID_SUCESSO,
+  ADICIONAR_LIVRO,
+  ADICIONAR_LIVRO_SUCESSO,
+  TODOS_AUTORES,
+  TODOS_AUTORES_SUCESSO,
+  TODAS_EDITORAS,
+  TODAS_EDITORAS_SUCESSO,
 } from './mutation-types';
 
 export const produtoActions = {
@@ -81,6 +87,30 @@ export const livroActions = {
     commit(LIVRO_POR_ID);
     axios.get(`${API_BASE_LIVRARIA}/livros/${payload}`).then((response) => {
       commit(LIVRO_POR_ID_SUCESSO, response.data);
+    });
+  },
+  adicionarLivro({ commit }, payload) {
+    commit(ADICIONAR_LIVRO);
+    axios.post(`${API_BASE_LIVRARIA}/livros/novo`, payload).then((response) => {
+      commit(ADICIONAR_LIVRO_SUCESSO, response.data);
+    });
+  },
+};
+
+export const autoresActions = {
+  todosAutores({ commit }) {
+    commit(TODOS_AUTORES);
+    axios.get(`${API_BASE_LIVRARIA}/autores/todos`).then((response) => {
+      commit(TODOS_AUTORES_SUCESSO, response.data);
+    });
+  },
+};
+
+export const editorasActions = {
+  todasEditoras({ commit }) {
+    commit(TODAS_EDITORAS);
+    axios.get(`${API_BASE_LIVRARIA}/editoras/todos`).then((response) => {
+      commit(TODAS_EDITORAS_SUCESSO, response.data);
     });
   },
 };

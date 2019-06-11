@@ -9,7 +9,10 @@ import Carrinho from '@/pages/Carrinho';
 import Detalhes from '@/pages/Detalhes';
 import DetalhesLivro from '@/pages/DetalhesLivro';
 import HomeLivros from '@/pages/HomeLivros';
-import Livros from '@/pages/admin/Livros';
+import IndexLivros from '@/pages/adminLivros/IndexLivros';
+import Livros from '@/pages/adminLivros/Livros';
+import NovoLivro from '@/pages/adminLivros/NovoLivro';
+import EditarLivro from '@/pages/adminLivros/EditarLivro';
 
 Vue.use(Router);
 
@@ -22,7 +25,6 @@ export default new Router({
     },
     {
       path: '/admin',
-      name: 'Admin',
       // Rotas Pai continuam tendo um componente
       component: Index,
 
@@ -67,8 +69,25 @@ export default new Router({
     },
     {
       path: '/adminLivros',
-      name: 'Livros',
-      component: Livros,
+      component: IndexLivros,
+      // Rotas filhas
+      children: [
+        {
+          path: 'novo',
+          name: 'NovoLivro',
+          component: NovoLivro,
+        },
+        {
+          path: '',
+          name: 'Livros',
+          component: Livros,
+        },
+        {
+          path: 'editar/:id',
+          name: 'EditarLivro',
+          component: EditarLivro,
+        },
+      ],
     },
   ],
 });

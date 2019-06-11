@@ -1,5 +1,5 @@
 <template>
-  <form @submit.prevent="salvarProduto">
+  <form @submit.prevent="salvarLivro">
     <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
       <div class="form-group">
         <label>Título</label>
@@ -78,7 +78,23 @@
 
 <script>
 export default {
-  props: ['livro', 'autores', 'editoras', 'estaEditando'],
+  props: ['livro', 'estaEditando'],
+  computed: {
+    autores() {
+      return this.$store.getters.todosAutores;
+    },
+    editoras() {
+      return this.$store.getters.todasEditoras;
+    },
+  },
+  created() {
+    if (this.autores.length === 0) {
+      this.$store.dispatch('todosAutores');
+    }
+    if (this.editoras.length === 0) {
+      this.$store.dispatch('todasEditoras');
+    }
+  },
   methods: {
     salvarLivro() {
       this.$emit('salvar-livro', this.livro);

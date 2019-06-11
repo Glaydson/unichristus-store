@@ -22,3 +22,14 @@ export const livroGetters = {
   todosLivros: state => state.livros,
   livro: state => state.livro,
 };
+
+export const autoresGetters = {
+  // Todos os autores
+  todosAutores: state => state.autores,
+  autor: state => state.autor,
+};
+
+export const editorasGetters = {
+  todasEditoras: state => state.editoras,
+  editora: state => state.editora,
+};

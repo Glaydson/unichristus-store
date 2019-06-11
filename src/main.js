@@ -10,6 +10,7 @@ import router from './router';
 /* eslint-disable */
 Vue.config.productionTip = false;
 Vue.use(VeeValidate);
+// Filtro para exibir a data no formato correto
 Vue.filter('formatDate', function (value) {
   if (value) {
     return moment(String(value)).format('DD/MM/YYYY');

@@ -25,6 +25,8 @@
           </div>
         </div>
       </div>
+      <p></p>
+      <button class="btn btn-success" @click='voltar'>Voltar</button>
     </div>
   </div>
 </template>
@@ -35,6 +37,11 @@ export default {
   computed: {
     autores() {
       return this.livro.autores;
+    },
+  },
+  methods: {
+    voltar() {
+      return this.$router.go(-1);
     },
   },
 };

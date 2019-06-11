@@ -31,6 +31,7 @@ import {
   ADICIONAR_PRODUTO_SUCESSO,
   ATUALIZAR_PRODUTO_SUCESSO,
   REMOVER_PRODUTO_SUCESSO,
+  ADICIONAR_LIVRO_SUCESSO,
 } from './store/mutation-types';
 
 export default {
@@ -48,6 +49,9 @@ export default {
             break;
           case REMOVER_PRODUTO_SUCESSO:
             toastr.warning('Produto removido.', 'Apagado!');
+            break;
+          case ADICIONAR_LIVRO_SUCESSO:
+            toastr.success('Livro Gravado.', 'Sucesso!');
             break;
           default:
         }

@@ -20,6 +20,12 @@ import {
   TODOS_LIVROS_SUCESSO,
   LIVRO_POR_ID,
   LIVRO_POR_ID_SUCESSO,
+  ADICIONAR_LIVRO,
+  ADICIONAR_LIVRO_SUCESSO,
+  TODOS_AUTORES,
+  TODOS_AUTORES_SUCESSO,
+  TODAS_EDITORAS,
+  TODAS_EDITORAS_SUCESSO,
 } from './mutation-types';
 
 export const produtoMutations = {
@@ -107,5 +113,32 @@ export const livroMutations = {
   [LIVRO_POR_ID_SUCESSO](state, payload) {
     state.showLoader = false;
     state.livro = payload;
+  },
+  [ADICIONAR_LIVRO]: (state) => {
+    state.showLoader = true;
+  },
+  [ADICIONAR_LIVRO_SUCESSO]: (state, payload) => {
+    state.showLoader = false;
+    state.livros.push(payload);
+  },
+};
+
+export const autoresMutations = {
+  [TODOS_AUTORES](state) {
+    state.showLoader = true;
+  },
+  [TODOS_AUTORES_SUCESSO](state, payload) {
+    state.showLoader = false;
+    state.autores = payload;
+  },
+};
+
+export const editorasMutations = {
+  [TODAS_EDITORAS](state) {
+    state.showLoader = true;
+  },
+  [TODAS_EDITORAS_SUCESSO](state, payload) {
+    state.showLoader = false;
+    state.editoras = payload;
   },
 };
